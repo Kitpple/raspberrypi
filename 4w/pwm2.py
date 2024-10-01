@@ -1,8 +1,7 @@
-
 #
-#      공대선배 라즈베리파이썬 #6-1 PWM 출력1
+#      공대선배 라즈베리파이썬 #6-2 PWM 출력2
 #      youtube 바로가기: https://www.youtube.com/c/공대선배
-#      LED가 단계적으로 밝아지는 코드
+#      LED가 서서히 밝아졌다가 서서히 어두워지는 코드
 #
 
 import RPi.GPIO as GPIO     # 라즈베리파이 GPIO 관련 모듈을 불러옴
@@ -19,19 +18,13 @@ pwm.start(0)                    # 처음 PWM 출력은 0으로 설정
 ### 이부분은 아두이노 코딩의 loop()에 해당합니다
 try:                                    # 이 try 안의 구문을 먼저 수행하고
     while True:                         # 무한루프 시작: 아두이노의 loop()와 같음
-        pwm.ChangeDutyCycle(0)          # pwm의 듀티사이클을 0%로(LED 끔)
-        time.sleep(1)                   # 1초간 대기
-        pwm.ChangeDutyCycle(25)         # 듀티사이클을 25%로(LED 밝기 25%)
-        time.sleep(1)                   # 1초간 대기
-        pwm.ChangeDutyCycle(50)         # 듀티사이클을 50%로(LED 최대의 절반밝기로)
-        time.sleep(1)                   # 1초간 대기
-        pwm.ChangeDutyCycle(75)         # 듀티사이클을 75%로(LED 밝기 75%)
-        time.sleep(1)                   # 1초간 대기
-        pwm.ChangeDutyCycle(100)        # 듀티사이클을 100%로(LED 최대밝기)
-        time.sleep(1)                   # 1초간 대기
+        for ii in range(100):           # ii가 0~99 까지 총 100회의 for 루프
+            pwm.ChangeDutyCycle(ii)     # 듀티싸이클을 ii로 설정
+            time.sleep(0.01)            # 1/100초간 대기 (서서히 밝아짐)
+        for ii in reversed(range(100)): # ii가 99~0까지 총 100회의 for 루프
+            pwm.ChangeDutyCycle(ii)     # 듀티싸이클을 ii로 설정
+            time.sleep(0.01)            # 1/100초간 대기 (서서히 어두워짐)
 
 ### 이부분은 반드시 추가해주셔야 합니다.
 finally:                                # try 구문이 종료되면
-    GPIO.cleanup()                      # GPIO 핀들을 초기화
-lect#6-1_pwm1.py
-lect#6-1_pwm1.py 표시 중입니다.
+    GPIO.cleanup()     
