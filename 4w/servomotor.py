@@ -10,7 +10,7 @@ from time import sleep      #time 라이브러리의 sleep함수 사용
 GPIO.setmode(GPIO.BCM)      # GPIO 핀들의 번호를 지정하는 규칙 설정
 
 ### 이부분은 아두이노 코딩의 setup()에 해당합니다
-servo_pin = 12                   # 서보핀은 라즈베리파이 GPIO 12번핀으로 
+servo_pin =  18                  # 서보핀은 라즈베리파이 GPIO 12번핀으로 
 
 GPIO.setup(servo_pin, GPIO.OUT)  # 서보핀을 출력으로 설정 
 servo = GPIO.PWM(servo_pin, 50)  # 서보핀을 PWM 모드 50Hz로 사용
