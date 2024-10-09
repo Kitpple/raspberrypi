@@ -22,3 +22,8 @@ try:                                    # 이 try 안의 구문을 먼저 수행
 
 finally:                                # try 구문이 종료되면
     GPIO.cleanup()                      # GPIO 핀들을 초기화
+    
+    
+    
+    
+    
