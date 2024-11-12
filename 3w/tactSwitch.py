@@ -4,7 +4,7 @@ GPIO.setmode(GPIO.BCM)      # GPIO 핀들의 번호를 지정하는 규칙 설�
 
 
 LED_pin = 2                     # LED 핀은 라즈베리파이 GPIO 2번핀으로 
-sw_pin = 15                     # 스위치 핀은 라즈베리파이 GPIO 15번핀으로
+sw_pin = 17                     # 스위치 핀은 라즈베리파이 GPIO 15번핀으로
 GPIO.setup(LED_pin, GPIO.OUT)   # LED 핀을 출력으로 설정
 GPIO.setup(sw_pin, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)   
 # 스위치 핀을 풀다운저항이 있는 출력으로 설정
