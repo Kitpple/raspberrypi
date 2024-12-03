@@ -1,23 +1,21 @@
-# Python bytecode
-*.pyc
-
-# Django migrations
-*/migrations/*
-
-# Virtual environment
-venv/
+# 가상환경 폴더
 myenv/
 
-# Database files
-*.sqlite3
+# SQLite 데이터베이스 파일
+db.sqlite3
 
-# IDE settings (IntelliJ, VSCode, etc.)
-.idea/
+# 파이썬 캐시 파일들
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE/에디터 관련 파일
 .vscode/
+.idea/
 
-# OS generated files
-.DS_Store
-Thumbs.db
+# static 파일을 위한 예시
+/myapp/static/
 
-# Log files
-*.log
+# Django의 media 파일들
+/media/
