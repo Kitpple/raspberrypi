@@ -6,8 +6,9 @@ import random
 GPIO.setmode(GPIO.BCM)
 
 # LED와 버튼 핀 설정
-LED_PINS = {'red':2, 'green': 10}
-BUTTON_PINS = {'red': 17, 'green': 18}
+LED_PINS = {'green':17, 'red': 27}
+BUTTON_PINS = {'green': 5, 'red': 6}
+SCORE = 21
 
 # LED와 버튼 핀 초기화
 for pin in LED_PINS.values():
