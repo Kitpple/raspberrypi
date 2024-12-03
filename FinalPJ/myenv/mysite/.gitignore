@@ -14,16 +14,11 @@ __pycache__/
 .vscode/
 .idea/
 
-# static 파일을 위한 예시
-myapp/static/
-
 # Django의 media 파일들
 media/
 
 # Git이 추적하지 않게 할 외부 디렉토리
-../myenv/
-../bin/
-../lib/
-../lib64
-../../../myenv/
-../pyvenv.cfg
+bin/
+lib/
+lib64/
+pyvenv.cfg
