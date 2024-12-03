@@ -15,7 +15,15 @@ __pycache__/
 .idea/
 
 # static 파일을 위한 예시
-/myapp/static/
+myapp/static/
 
 # Django의 media 파일들
-/media/
+media/
+
+# Git이 추적하지 않게 할 외부 디렉토리
+../myenv/
+../bin/
+../lib/
+../lib64
+../../../myenv/
+../pyvenv.cfg
